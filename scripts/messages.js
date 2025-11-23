@@ -7,7 +7,7 @@ async function loadMessages() {
   const token = localStorage.getItem('token');
 
   if (!token) {
-    window.location.href = `${window.origin}/login.html`;
+    window.location.href = `${window.origin}/anony/login.html`;
     return;
   }
 
@@ -104,5 +104,5 @@ loadMessages();
 document.getElementById('btn-logout').addEventListener('click', () => {
   localStorage.removeItem("token");
   console.log("Hello orld");
-  window.location.href = `${window.origin}/login.html`;
+  window.location.href = `${window.origin}/anony/login.html`;
 })

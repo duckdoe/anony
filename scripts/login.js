@@ -114,7 +114,7 @@ submitBtn.addEventListener('click', async (e) => {
     const url = new URL(`${window.location}${data.redirect}`);
     const searchParams = url.search;
 
-    window.location.href = `${window.origin}/messages.html${searchParams}`;
+    window.location.href = `${window.origin}/anony/messages.html${searchParams}`;
   } catch (err) {
     const errMessage = String(err).split(' ').splice(1).join(' ');
     displayError(errMessage);
