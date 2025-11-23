@@ -89,26 +89,6 @@ form input:focus {
   justify-content: center;
 }
 
-.error {
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgb(255, 0, 43);
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  width: max-content;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.error-animation {
-  animation: error .2s ease forwards;
-}
-
 .auth-change {
   width: 100%;
   display: flex;
@@ -137,10 +117,4 @@ form input:focus {
 
 .active {
   background-color: #4338ca;
-}
-
-@keyframes error {
-  to {
-    transform: translate(-50%, 0%);
-  }
 }
