@@ -32,8 +32,6 @@ async function loadMessages() {
   const data = await res.json()
   let messages = data.messages;
 
-  console.log(data);
-
   const shareLink = `${window.origin}/anony/send-message?id=${data.user_id}`;
   document.getElementById('share-link-input').value = shareLink;
   console.log(shareLink);
@@ -58,6 +56,7 @@ async function loadMessages() {
     document.body.removeChild(textArea);
   };
 
+  document.getElementById('btn-copy-link').addEventListener('click', copyToClipBoard)
   if (res.status == 404) {
     isLoading(document.getElementById('message-container'), {
       loading: false,
@@ -84,7 +83,6 @@ async function loadMessages() {
     return Math.floor(seconds) + 's ago';
   }
 
-  document.getElementById('btn-copy-link').addEventListener('click', copyToClipBoard)
   isLoading(document.getElementById('message-container'), {
     loading: false,
   })
