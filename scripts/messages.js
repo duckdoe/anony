@@ -1,3 +1,4 @@
+import displayError from "./displayError.js";
 import isLoading from "./loading.js";
 
 async function loadMessages() {
@@ -28,20 +29,12 @@ async function loadMessages() {
     window.location.href = `${window.origin}/login.html`;
   }
 
-
-  if (res.status == 404) {
-    isLoading(document.getElementById('message-container'), {
-      loading: false,
-    });
-    document.getElementById('message-container').innerHTML = 'No messages found';
-    return;
-  }
-
   const data = await res.json()
   let messages = data.messages;
 
   const shareLink = `https://anony-backend-1-je2e.onrender.com/send-message?id=${data.user_id}`;
   document.getElementById('share-link-input').value = shareLink;
+  console.log(shareLink);
 
   function copyToClipBoard() {
     const textArea = document.createElement('textarea');
@@ -54,12 +47,21 @@ async function loadMessages() {
 
     try {
       document.execCommand('copy');
+      displayError("Copied");
     } catch (err) {
+      displayError("Failed to copy text");
       console.error("Failed to copy text", err);
     }
 
     document.body.removeChild(textArea);
   };
+
+  if (res.status == 404) {
+    isLoading(document.getElementById('message-container'), {
+      loading: false,
+    });
+    document.getElementById('message-container').innerHTML = '<p id="not-found-message">No messages found</p>';
+  }
 
   function formatTimeAgo(date) {
     if (!date) return "Just now";
@@ -78,8 +80,6 @@ async function loadMessages() {
     if (interval > 1) return Math.floor(interval) + 'min ago';
     return Math.floor(seconds) + 's ago';
   }
-
-
 
   document.getElementById('btn-copy-link').addEventListener('click', copyToClipBoard)
   isLoading(document.getElementById('message-container'), {
