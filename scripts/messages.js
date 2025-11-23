@@ -103,6 +103,5 @@ loadMessages();
 
 document.getElementById('btn-logout').addEventListener('click', () => {
   localStorage.removeItem("token");
-  console.log("Hello orld");
   window.location.href = `${window.origin}/anony/login.html`;
 })

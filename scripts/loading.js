@@ -7,13 +7,11 @@ function isLoading(el, content = {
     let spinner = el.children.namedItem("spinner");
 
     if (spinner == undefined) {
-      console.log("This element does not have a child called spinner");
       return;
     };
 
     spinner.remove();
     el.innerHTML = content.content ? content.content : '';
-    console.log(content.content);
     return;
   }
   let elContent = el.innerHTML;

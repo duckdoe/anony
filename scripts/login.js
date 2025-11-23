@@ -69,8 +69,6 @@ submitBtn.addEventListener('click', async (e) => {
         content: content,
       });
     }
-
-    console.log(res);
     return;
   }
   let content = isLoading(document.querySelector('.js-submit-btn'), {
