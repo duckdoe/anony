@@ -1,4 +1,4 @@
-import isLoading from "./utils/loading.js";
+import isLoading from "./loading.js";
 
 async function loadMessages() {
   const searchParams = new URLSearchParams(window.location.search);

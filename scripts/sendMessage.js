@@ -1,5 +1,5 @@
-import isLoading from "./utils/loading.js";
-import displayError from "./utils/displayError.js";
+import isLoading from "./loading.js";
+import displayError from "./displayError.js";
 
 const submitBtn = document.querySelector('.js-submit-btn');
 
