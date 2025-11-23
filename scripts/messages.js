@@ -61,6 +61,7 @@ async function loadMessages() {
       loading: false,
     });
     document.getElementById('message-container').innerHTML = '<p id="not-found-message">No messages found</p>';
+    return;
   }
 
   function formatTimeAgo(date) {
