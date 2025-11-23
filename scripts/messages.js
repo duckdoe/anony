@@ -32,7 +32,7 @@ async function loadMessages() {
   const data = await res.json()
   let messages = data.messages;
 
-  const shareLink = `https://anony-backend-1-je2e.onrender.com/send-message?id=${data.user_id}`;
+  const shareLink = `${window.origin}/anony/send-message?id=${data.user_id}`;
   document.getElementById('share-link-input').value = shareLink;
   console.log(shareLink);
 
