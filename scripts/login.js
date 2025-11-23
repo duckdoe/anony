@@ -61,6 +61,11 @@ submitBtn.addEventListener('click', async (e) => {
           content: content,
         });
       };
+
+      isLoading(document.querySelector('.js-submit-btn'), {
+        loading: false,
+        content: content,
+      });
     } catch (err) {
       const errMessage = String(err).split(' ').splice(1).join(' ');
       displayError(errMessage);

@@ -32,6 +32,8 @@ async function loadMessages() {
   const data = await res.json()
   let messages = data.messages;
 
+  console.log(data);
+
   const shareLink = `${window.origin}/anony/send-message?id=${data.user_id}`;
   document.getElementById('share-link-input').value = shareLink;
   console.log(shareLink);
