@@ -26,7 +26,7 @@ async function loadMessages() {
   });
 
   if (res.status == 400) {
-    window.location.href = `${window.origin}/login.html`;
+    window.location.href = `${window.origin}/anony/login.html`;
   }
 
   const data = await res.json()
