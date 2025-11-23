@@ -30,7 +30,7 @@ async function loadMessages() {
 
 
   if (res.status == 404) {
-    isLoading(document.querySelector('.container'), {
+    isLoading(document.getElementById('message-container'), {
       loading: false,
     });
     document.getElementById('message-container').innerHTML = 'No messages found';
