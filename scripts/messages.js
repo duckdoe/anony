@@ -16,7 +16,7 @@ async function loadMessages() {
     size: '30',
   });
 
-  const res = await fetch(`https://anony-backend-hawkf.onrender.com/messages${window.location.search}`, {
+  const res = await fetch(`https://anony-backend-1-je2e.onrender.com/messages${window.location.search}`, {
     method: "GET",
     headers: new Headers({
       "Content-Type": "application/json",
@@ -40,7 +40,7 @@ async function loadMessages() {
   const data = await res.json()
   let messages = data.messages;
 
-  const shareLink = `https://anony-backend-hawkf.onrender.com/send-message?id=${data.user_id}`;
+  const shareLink = `https://anony-backend-1-je2e.onrender.com/send-message?id=${data.user_id}`;
   document.getElementById('share-link-input').value = shareLink;
 
   function copyToClipBoard() {

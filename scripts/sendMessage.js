@@ -30,7 +30,7 @@ submitBtn.addEventListener('click', async () => {
 
   try {
 
-    const res = await fetch(`https://anony-backend-hawkf.onrender.com/send-message${window.location.search}`, {
+    const res = await fetch(`https://anony-backend-1-je2e.onrender.com/send-message${window.location.search}`, {
       method: 'POST',
       body: JSON.stringify(payload),
       headers: new Headers({

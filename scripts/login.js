@@ -41,7 +41,7 @@ submitBtn.addEventListener('click', async (e) => {
     });
 
     try {
-      const res = await fetch('https://anony-backend-hawkf.onrender.com/signup', {
+      const res = await fetch('https://anony-backend-1-je2e.onrender.com/signup', {
         method: 'POST',
         body: JSON.stringify(payload),
         headers: new Headers({
@@ -83,7 +83,7 @@ submitBtn.addEventListener('click', async (e) => {
   password.value = '';
 
   try {
-    const res = await fetch('https://anony-backend-hawkf.onrender.com/login', {
+    const res = await fetch('https://anony-backend-1-je2e.onrender.com/login', {
       method: 'POST',
       body: JSON.stringify(payload),
       headers: new Headers({
