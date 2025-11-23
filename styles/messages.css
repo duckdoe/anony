@@ -1,0 +1,116 @@
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#page-dashboard {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#page-dashboard header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#page-dashboard header h1 {
+  font-size: 1.2rem;
+  font-weight: medium;
+}
+
+header {
+  margin-block: 24px;
+}
+
+#page-dashboard header button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+}
+
+.share-box {
+  padding: 20px;
+  background-color: #202839;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.share-box h2 {
+  font-size: 1.1rem;
+  font-weight: medium;
+  margin-bottom: 16px;
+}
+
+.share-box p {
+  font-size: 14px;
+  color: grey;
+  margin-bottom: 16px;
+}
+
+.copy-tools input {
+  background-color: #111827;
+  padding: 8px;
+  color: #f9fafb;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.copy-tools button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+}
+
+.recieved-messages-container {
+  width: 100%;
+  background-color: #202839;
+  margin-top: 32px;
+  border-radius: 8px;
+  overflow-x: hidden;
+}
+
+.recieved-messages-header h1 {
+  font-size: 1.1rem;
+  font-weight: medium;
+}
+
+.recieved-messages-container .recieved-messages-header {
+  border-bottom: 1px solid grey;
+  padding: 16px;
+  width: 100%;
+  background-color: #202839;
+  margin-block: 0;
+  border-radius: 8px 8px 0px 0px;
+}
+
+ul {
+  list-style-type: none;
+  overflow-y: scroll;
+  max-height: 250px;
+  position: relative;
+}
+
+#spinner {
+  position: relative;
+  top: 50%;
+  left: 42%;
+  margin: 24px;
+}
+
+ul li {
+  font-size: 14px;
+  margin-bottom: 16px;
+  border-top: 1px solid rgb(255, 255, 255, .1);
+  padding: 16px;
+}
+
+ul li span {
+  font-size: 12px;
+  color: grey;
+}

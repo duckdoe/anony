@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <header>
+          <h1>Welcome Back</h1>
+          <p>Recieve anonymous messages</p>
+        </header>
+        <div class="auth-change">
+          <div class="login active auth-flow" data-auth-type="login">Login</div>
+          <div class="signup auth-flow" data-auth-type="signup">Sign Up</div>
+        </div>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            placeholder="Your Username"
+            class="js-username"
+            name="username"
+            required
+            autocomplete="off"
+            spellcheck="false"
+            autocorrect="off"
+          />
+        </div>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            placeholder="Password"
+            class="js-password"
+            name="password"
+            required
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+          />
+        </div>
+        <button type="submit" class="js-submit-btn submit-btn">Login</button>
+      </form>
+      <p class="title">A simple, anonymous messaging service.</p>
+    </div>
+    <script src="../scripts/login.js" type="module"></script>
+  </body>
+</html>

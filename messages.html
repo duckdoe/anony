@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messages</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/messages.css" />
+  </head>
+  <body>
+    <main>
+      <div id="page-dashboard">
+        <header>
+          <h1>Your Messages</h1>
+          <button id="btn-logout">Logout</button>
+        </header>
+        <div class="share-box">
+          <h2>Your Link</h2>
+          <p>Share this link with anyone to recieve anonymous messages</p>
+          <div class="copy-tools">
+            <input id="share-link-input" type="text" readonly />
+            <button id="btn-copy-link">Copy</button>
+          </div>
+        </div>
+        <div class="recieved-messages-container">
+          <header class="recieved-messages-header">
+            <h1>Recieved Messages</h1>
+          </header>
+          <ul id="message-container" class="custom-scrollbar"></ul>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/messages.js" type="module"></script>
+  </body>
+</html>

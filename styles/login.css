@@ -1,0 +1,146 @@
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px 24px;
+  background-color: #202839;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, .2);
+  max-width: 350px;
+  border-radius: 8px;
+}
+
+.container {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form header p {
+  color: grey;
+  font-size: 12px;
+  text-align: center;
+}
+
+form header h1 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+form input {
+  padding: 10px;
+  border: none;
+  margin-bottom: 16px;
+  background-color: #111827;
+  width: 100%;
+  border-radius: 4px;
+  color: white;
+}
+
+form input:focus {
+  outline: none;
+}
+
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper::after {
+  content: '';
+  width: 0%;
+  height: 1px;
+  background-color: aqua;
+  position: absolute;
+  bottom: 16px;
+  left: 0px;
+  display: block;
+  transition: .4;
+}
+
+.in-focus::after {
+  width: 100%;
+}
+
+.no-account {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.title {
+  color: grey;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 0, 43);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.error-animation {
+  animation: error .2s ease forwards;
+}
+
+.auth-change {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  height: 45px;
+  margin-block: 24px;
+  background-color: #111827;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.login,
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: .2s;
+  background-color: transparent;
+  height: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #4338ca;
+}
+
+@keyframes error {
+  to {
+    transform: translate(-50%, 0%);
+  }
+}
